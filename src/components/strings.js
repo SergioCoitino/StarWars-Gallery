@@ -12,27 +12,27 @@ export const APP_TEXT = {
 export const RESOURCES = {
     'Characters': {
         apiEndpoint: 'https://swapi.dev/api/people/',
-        imageFolder: '/src/assets/people/',
+        imageFolder: '/assets/people/',
         title: 'Star Wars Characters'
     },
     'Planets': {
         apiEndpoint: 'https://swapi.dev/api/planets/', // 🚨 AGREGADO: Planets API
-        imageFolder: '/src/assets/planets/',           // 🚨 Asumida carpeta de imágenes
+        imageFolder: '/assets/planets/',           // 🚨 Asumida carpeta de imágenes
         title: 'Star Wars Planets'
     },
     'Species': {
         apiEndpoint: 'https://swapi.dev/api/species/',
-        imageFolder: '/src/assets/species/',
+        imageFolder: '/assets/species/',
         title: 'Star Wars Species'
     },
     'Starships': {
         apiEndpoint: 'https://swapi.dev/api/starships/',
-        imageFolder: '/src/assets/starships/',
+        imageFolder: '/assets/starships/',
         title: 'Star Wars Starships'
     },
     'Vehicles': {
         apiEndpoint: 'https://swapi.dev/api/vehicles/', // 🚨 AGREGADO: Vehicles API
-        imageFolder: '/src/assets/vehicles/',           // 🚨 Asumida carpeta de imágenes
+        imageFolder: '/assets/vehicles/',           // 🚨 Asumida carpeta de imágenes
         title: 'Star Wars Vehicles'
     },
 };
