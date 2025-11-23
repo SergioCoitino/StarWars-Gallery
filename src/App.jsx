@@ -11,12 +11,9 @@ function App() {
 
         <>
           <Svg/>
-
           <Header/>
           <GalleryRouter/>
           <Footer/>    
-
-    
           <ThemeToggle/>  
         </>
 
