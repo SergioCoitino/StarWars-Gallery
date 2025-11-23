@@ -1,6 +1,4 @@
-// src/strings.js
 
-// --- TEXTOS DE LA INTERFAZ (SOLO INGLÉS) ---
 export const APP_TEXT = {
     title: "Interactive SWAPI Gallery",
     description1: "Explore and filter over 60 key resources from the Star Wars universe (Characters, Starships, Planets, etc.).",
@@ -16,8 +14,8 @@ export const RESOURCES = {
         title: 'Star Wars Characters'
     },
     'Planets': {
-        apiEndpoint: 'https://swapi.dev/api/planets/', // 🚨 AGREGADO: Planets API
-        imageFolder: '/assets/planets/',           // 🚨 Asumida carpeta de imágenes
+        apiEndpoint: 'https://swapi.dev/api/planets/', 
+        imageFolder: '/assets/planets/',          
         title: 'Star Wars Planets'
     },
     'Species': {
@@ -31,11 +29,10 @@ export const RESOURCES = {
         title: 'Star Wars Starships'
     },
     'Vehicles': {
-        apiEndpoint: 'https://swapi.dev/api/vehicles/', // 🚨 AGREGADO: Vehicles API
-        imageFolder: '/assets/vehicles/',           // 🚨 Asumida carpeta de imágenes
+        apiEndpoint: 'https://swapi.dev/api/vehicles/', 
+        imageFolder: '/assets/vehicles/',           
         title: 'Star Wars Vehicles'
     },
 };
 
-// Exportamos las claves para iteración
 export const RESOURCE_KEYS = Object.keys(RESOURCES);

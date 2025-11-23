@@ -153,7 +153,6 @@ function CardGallery({ apiEndpoint, imageFolder, title }) {
           <div className="row row-cols-1 row-cols-md-3 g-3"> 
             {items
                .map((item, index) => (
-                 // Pasamos imageFolder a ItemCard (aunque no la use directamente, es buena práctica)
                  <ItemCard key={index} item={item} imageFolder={imageFolder} /> 
             ))}
           </div>
