@@ -1,16 +1,113 @@
-# React + Vite
+# StarWars Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive gallery built with **React + Vite**, displaying characters, planets, and starships from the Star Wars universe. The project consumes public APIs to dynamically load visual and textual content, offering a clean interface and a smooth user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+Visit the deployed version on Netlify: **[https://starwarsgallery.netlify.app/](https://starwarsgallery.netlify.app/)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Preview do projeto](assets/preview.jpg)
+
+---
+
+## ✨ Features
+
+* Based on the **Bootstrap Gallery** example, adapted and improved for React.
+* **Dynamic content** loaded from public Star Wars APIs.
+* **Responsive design** optimized for mobile and desktop.
+* **Clean interface** with intuitive navigation.
+* **High performance** powered by Vite.
+* **Reusable components** and organized structure.
+
+---
+
+## 🛠️ Technologies Used
+
+* **React** (Components, Hooks)
+* **Vite** (Fast development/build tool)
+* **JavaScript (ES6+)**
+* **CSS** / Custom styling
+* **Public APIs** for Star Wars data
+
+---
+
+## 🔧 Installation
+
+Follow these steps to run the project locally:
+
+```bash
+# Clone the repository
+$ git clone https://github.com/SergioCoitino/StarWars-Gallery.git
+
+# Enter the project folder
+$ cd StarWars-Gallery
+
+# Install dependencies
+$ npm install
+
+# Start the development server
+$ npm run dev
+```
+
+The app will be available at:
+
+```
+http://localhost:5173/
+```
+
+---
+
+## 📦 Production Build
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+The output will be generated in the `dist/` folder.
+
+---
+
+## 🌐 Deployment
+
+This project is deployed on **Netlify**. You can also deploy it using:
+
+* **Vercel**
+* **GitHub Pages**
+* **Any static hosting service**
+
+---
+
+## 🤝 Contributions
+
+At this time, this project **does not accept external contributions**.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👤 Author
+
+**Sergio Coitiño**
+
+* GitHub: [https://github.com/SergioCoitino](https://github.com/SergioCoitino)
+* LinkedIn: [https://www.linkedin.com/in/sergiocoitino/](https://www.linkedin.com/in/sergiocoitino/)
+
+---
+
+## ⭐ Support the Project
+
+If you like this project, consider giving it a **star** on GitHub.
+
+Thank you for visiting this gallery!
