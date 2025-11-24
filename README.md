@@ -12,7 +12,7 @@ Visit the deployed version on Netlify: **[https://starwarsgallery.netlify.app/](
 
 ## 📸 Preview
 
-![Preview do projeto](assets/preview.jpg)
+![Preview do projeto](https://starwarsgallery.netlify.app/preview.jpg)
 
 ---
 
