@@ -13,9 +13,9 @@ function Header() {
                 <div className="col-sm-4 offset-md-1 py-4">
                   <h4>About me</h4>
                   <ul className="list-unstyled">
-                    <li><a href="https://github.com/SergioCoitino" className="text-white">GitHub</a></li>
-                    <li><a href="https://sergio-coitino-portfolio.netlify.app/" className="text-white">Portfolio</a></li>
-                    <li><a href="https://swapi.dev/documentation" className="text-white">Check out SWAPI</a></li>
+                    <li><a href="https://github.com/SergioCoitino" target="_blank" rel="noopener noreferrer" className="text-white">GitHub</a></li>
+                    <li><a href="https://sergio-coitino-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-white">Portfolio</a></li>
+                    <li><a href="https://swapi.dev/documentation" target="_blank" rel="noopener noreferrer" className="text-white">Check out SWAPI</a></li>
                   </ul>
                 </div>
               </div>
