@@ -14,7 +14,7 @@ function Header() {
                   <h4>About me</h4>
                   <ul className="list-unstyled">
                     <li><a href="https://github.com/SergioCoitino" className="text-white">GitHub</a></li>
-                    <li><a href="#" className="text-white">Portfolio</a></li>
+                    <li><a href="https://sergio-coitino-portfolio.netlify.app/" className="text-white">Portfolio</a></li>
                     <li><a href="https://swapi.dev/documentation" className="text-white">Check out SWAPI</a></li>
                   </ul>
                 </div>
