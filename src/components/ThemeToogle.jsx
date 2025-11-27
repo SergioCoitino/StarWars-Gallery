@@ -1,4 +1,4 @@
-// src/components/ThemeToggle.jsx
+
 import React, { useEffect, useState } from "react";
 
 const getStoredTheme = () => localStorage.getItem("theme");
