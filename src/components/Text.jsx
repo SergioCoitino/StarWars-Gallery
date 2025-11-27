@@ -1,10 +1,9 @@
 import React from 'react';
-// Importamos directamente los textos y las claves
 import { APP_TEXT, RESOURCE_KEYS } from './strings'; 
 
 function Text({ onResourceChange, activeResource }) {
   
-  const text = APP_TEXT; // Usamos el objeto de texto directamente
+  const text = APP_TEXT; 
   
   return (
     <main>
@@ -20,9 +19,7 @@ function Text({ onResourceChange, activeResource }) {
               {text.description1}
             </p>
             
-            {/* 1. BOTONES DE NAVEGACIÓN INTERNA (Usando las nuevas claves) */}
             <p className="mt-4">
-              {/* Usamos RESOURCE_KEYS para renderizar todos los botones (Characters, Planets, Species, Starships, Vehicles) */}
               {RESOURCE_KEYS.map((resource) => (
                   <button
                       key={resource}
@@ -37,7 +34,7 @@ function Text({ onResourceChange, activeResource }) {
             {/* 2. BOTONES DE ENLACES EXTERNOS */}
             <p className="mt-4">
               <a 
-                href="https://github.com/SergioCoitino" // 🚨 Reemplaza este link
+                href="https://github.com/SergioCoitino" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-primary my-2 mx-1"
@@ -46,7 +43,7 @@ function Text({ onResourceChange, activeResource }) {
               </a>
               
               <a 
-                href="[LINK_OTRO_PROYECTO_STAR_WARS]" // 🚨 Reemplaza este link
+                href="https://charactersstar-wars.netlify.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn btn-secondary my-2 mx-1"

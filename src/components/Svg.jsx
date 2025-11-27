@@ -1,4 +1,4 @@
-// src/components/Svg.jsx
+
 import React from "react";
 
 function Svg() {
