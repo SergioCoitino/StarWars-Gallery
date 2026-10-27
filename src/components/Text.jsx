@@ -44,7 +44,7 @@ function Text({ onResourceChange, activeResource }) {
             </a>
             
             <a 
-              href="https://charactersstar-wars.netlify.app/" 
+              href="https://star-warsapp.netlify.app/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-secondary my-2 mx-1"

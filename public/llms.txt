@@ -28,4 +28,4 @@
 - **Portfolio**: https://sergio-coitino-portfolio.netlify.app/
 - **GitHub**: https://github.com/SergioCoitino
 - **LinkedIn**: https://www.linkedin.com/in/sergiocoitino/
-- **Related Project**: [Star Wars Characters App](https://charactersstar-wars.netlify.app/)
+- **Related Project**: [Star Wars App](https://star-warsapp.netlify.app/)
