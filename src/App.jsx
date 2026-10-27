@@ -8,15 +8,15 @@ import ThemeToggle from './components/ThemeToogle'
 
 function App() {
   return (
-
         <>
           <Svg/>
           <Header/>
-          <GalleryRouter/>
+          <main>
+            <GalleryRouter/>
+          </main>
           <Footer/>    
           <ThemeToggle/>  
         </>
-
   )
 }
 

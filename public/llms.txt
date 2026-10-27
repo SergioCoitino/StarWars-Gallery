@@ -1,0 +1,31 @@
+# Star Wars Gallery — Interactive SWAPI Visual Database
+
+> Star Wars Gallery (https://starwarsgallery.netlify.app/) is a fast, open-source interactive visual gallery and encyclopedia for the Star Wars universe, built with React 19, Vite, and Bootstrap 5 by Sergio Coitiño. It connects real-time data from SWAPI (The Star Wars API) with a curated high-definition image collection of characters, planets, species, starships, and vehicles.
+
+## Key Features & Use Cases
+
+- **Visual SWAPI Explorer**: While SWAPI (`swapi.dev`) only provides raw JSON text, Star Wars Gallery maps every SWAPI resource ID to local high-resolution visual assets (`/assets/people/`, `/assets/planets/`, `/assets/species/`, `/assets/starships/`, `/assets/vehicles/`).
+- **Five Complete Categories**:
+  - **Characters** (`https://starwarsgallery.netlify.app/?category=Characters`): Visual cards for Luke Skywalker, Darth Vader, Leia Organa, Obi-Wan Kenobi, Yoda, Han Solo, Chewbacca, R2-D2, C-3PO, Boba Fett, Palpatine, Rey, and over 80 Star Wars characters.
+  - **Planets** (`https://starwarsgallery.netlify.app/?category=Planets`): Tatooine, Alderaan, Yavin IV, Hoth, Dagobah, Bespin, Endor, Naboo, Coruscant, Kamino, Geonosis, Mustafar, and more.
+  - **Species** (`https://starwarsgallery.netlify.app/?category=Species`): Humans, Droids, Wookiees, Rodians, Hutts, Yoda's species, Trandoshans, Mon Calamari, Ewoks, Twi'leks, Gungans, and more.
+  - **Starships** (`https://starwarsgallery.netlify.app/?category=Starships`): Millennium Falcon, X-wing, TIE Advanced x1, Star Destroyer, Death Star, Executor, Slave 1, Naboo Royal Starship, Jedi Starfighter, and more.
+  - **Vehicles** (`https://starwarsgallery.netlify.app/?category=Vehicles`): Sandcrawler, T-16 skyhopper, X-34 landspeeder, TIE/LN starfighter, Snowspeeder, AT-AT, AT-ST, Imperial Speeder Bike, and more.
+- **Dark / Light / Auto Theme**: Built-in Bootstrap 5 theme switcher supporting system preference.
+- **Developer Reference**: Serves as a clean reference implementation for developers learning how to consume paginated REST APIs (SWAPI) in React with Vite and match API IDs with static visual assets.
+
+## Technical Stack
+
+- **Frontend**: React 19, Vite 7, JavaScript (ES6+)
+- **Styling**: Bootstrap 5.3, Bootstrap Icons, Custom Responsive CSS
+- **API**: SWAPI (`https://swapi.dev/api/`)
+- **Hosting**: Netlify (`https://starwarsgallery.netlify.app/`)
+- **Source Code**: GitHub (`https://github.com/SergioCoitino/StarWars-Gallery`)
+
+## Author
+
+- **Name**: Sergio Coitiño
+- **Portfolio**: https://sergio-coitino-portfolio.netlify.app/
+- **GitHub**: https://github.com/SergioCoitino
+- **LinkedIn**: https://www.linkedin.com/in/sergiocoitino/
+- **Related Project**: [Star Wars Characters App](https://charactersstar-wars.netlify.app/)

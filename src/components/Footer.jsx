@@ -7,8 +7,24 @@ function Footer() {
         <p className="float-end mb-1">
           <a href="#">Back to top</a>
         </p>
-        <p className="mb-0">Developed by <a href="https://github.com/SergioCoitino" target="_blank" rel="noopener noreferrer">Sergio Coitiño</a></p>
-        <p className="mb-1">Star Wars and all associated names and/or images are copyright Lucasfilm Ltd. Images were freely collected from <a href="https://starwars.fandom.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Wookiepedia</a></p>
+        <p className="mb-1">
+          Developed by <a href="https://github.com/SergioCoitino" target="_blank" rel="noopener noreferrer">Sergio Coitiño</a> |{' '}
+          <a href="https://sergio-coitino-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</a> |{' '}
+          <a href="https://www.linkedin.com/in/sergiocoitino/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+        <p className="mb-2">
+          Star Wars and all associated names and/or images are copyright Lucasfilm Ltd. Images were freely collected from{' '}
+          <a href="https://starwars.fandom.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Wookieepedia</a> and data from{' '}
+          <a href="https://swapi.dev/" target="_blank" rel="noopener noreferrer">SWAPI</a>.
+        </p>
+        <nav aria-label="Footer category links" className="small">
+          <span>Categories: </span>
+          <a href="/?category=Characters" className="me-2">Characters</a>
+          <a href="/?category=Planets" className="me-2">Planets</a>
+          <a href="/?category=Species" className="me-2">Species</a>
+          <a href="/?category=Starships" className="me-2">Starships</a>
+          <a href="/?category=Vehicles">Vehicles</a>
+        </nav>
       </div>
     </footer>
   )

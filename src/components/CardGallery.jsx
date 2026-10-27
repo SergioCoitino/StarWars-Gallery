@@ -7,7 +7,7 @@ function getResourceIdFromUrl(url) {
   return segments.pop(); 
 }
 
-function ItemCard({ item, imageFolder }) {
+function ItemCard({ item, imageFolder, categoryTitle }) {
   const [errorCarga, setErrorCarga] = useState(false);
 
   const showPlaceholder = !item.imagen || errorCarga;
@@ -18,26 +18,26 @@ function ItemCard({ item, imageFolder }) {
 
   return (
     <div className="col">
-      <div className="card h-100 album-card"> 
-        
-        {}
+      <article className="card h-100 album-card"> 
         {showPlaceholder ? (
-          <div className="album-img d-flex align-items-center justify-content-center text-muted border">
-             {item.imagen ? '[No Image]' : '[Not Available]'} 
+          <div className="album-img d-flex align-items-center justify-content-center text-muted border" role="img" aria-label={`No image available for ${item.name}`}>
+             [Not Available]
           </div>
         ) : (
           <img 
             src={item.imagen} 
             className="card-img-top album-img" 
-            alt={`Image of ${item.name}`} 
+            alt={`${item.name} — ${categoryTitle} | Star Wars Gallery`} 
+            loading="lazy"
+            decoding="async"
             onError={() => setErrorCarga(true)} 
           />
         )}
 
         <div className="card-body d-flex align-items-center justify-content-center"> 
-          <h5 className="card-title text-center">{item.name}</h5>
+          <h3 className="card-title text-center h5">{item.name}</h3>
         </div>
-      </div>
+      </article>
     </div>
   );
 }
@@ -49,28 +49,12 @@ function CardGallery({ apiEndpoint, imageFolder, title }) {
   const [totalPaginas, setTotalPaginas] = useState(1);
   const [cargando, setCargando] = useState(true);
 
-  // --- FUNCIÓN DE UTILIDAD: Verifica la existencia de la imagen ---
-  async function verificarImagenExistente(id) {
-    // Usa la prop imageFolder
-    const url = `${imageFolder}${id}.jpg`; 
-    try {
-      const response = await fetch(url, { method: 'HEAD' });
-      return response.ok; 
-    } catch (error) {
-      return false;
-    }
-  }
-
-
   useEffect(() => {
-
     setPagina(1);
     cargarItems(1); 
   }, [apiEndpoint, imageFolder]);
 
- 
   useEffect(() => {
-  
     if (pagina !== 1 || apiEndpoint.includes('page=1')) {
         cargarItems(pagina);
     }
@@ -79,36 +63,25 @@ function CardGallery({ apiEndpoint, imageFolder, title }) {
   const cargarItems = async (pageNumber) => {
     setCargando(true);
     try {
-   
       const response = await fetch(`${apiEndpoint}?page=${pageNumber}`);
       if (!response.ok) {
-        throw new Error('Error al load data');
+        throw new Error('Error loading data from SWAPI');
       }
       const data = await response.json();
 
       const totalItemsSWAPI = data.count; 
       const itemsAPI = data.results;
 
-      const itemsConImagenPromesas = itemsAPI.map(async (item) => {
+      const itemsConImagen = itemsAPI.map((item) => {
         const id = getResourceIdFromUrl(item.url); 
-        const imagenExiste = await verificarImagenExistente(id);
-
-        if (imagenExiste) {
-          return {
-            name: item.name,
-            imagen: `${imageFolder}${id}.jpg`
-          };
-        } else {
-          return {
-            name: item.name,
-            imagen: null 
-          };
-        }
+        return {
+          id,
+          name: item.name,
+          imagen: `${imageFolder}${id}.jpg`
+        };
       });
-
-      const itemsVerificados = await Promise.all(itemsConImagenPromesas);
       
-      setItems(itemsVerificados);
+      setItems(itemsConImagen);
       setTotalPaginas(Math.ceil(totalItemsSWAPI / LIMITE_POR_PAGINA));
 
     } catch (error) {
@@ -132,39 +105,53 @@ function CardGallery({ apiEndpoint, imageFolder, title }) {
   };
 
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">{title}</h1>
+    <section className="container mt-5" aria-labelledby="gallery-category-heading">
+      <h2 id="gallery-category-heading" className="text-center mb-4 h1">{title}</h2>
       
       {cargando && (
-        <div className="text-center my-5">
-          <div className="spinner-border text-primary" role="status">
+        <div className="text-center my-5" role="status" aria-live="polite">
+          <div className="spinner-border text-primary">
             <span className="visually-hidden">Loading...</span> 
           </div>
-          <p className="mt-2">Loading items...</p>
+          <p className="mt-2">Loading {title.toLowerCase()}...</p>
         </div>
       )}
 
       {!cargando && (
         <>
           <div className="row row-cols-1 row-cols-md-3 g-3"> 
-            {items
-               .map((item, index) => (
-                 <ItemCard key={index} item={item} imageFolder={imageFolder} /> 
+            {items.map((item) => (
+              <ItemCard 
+                key={item.id || item.name} 
+                item={item} 
+                imageFolder={imageFolder} 
+                categoryTitle={title}
+              /> 
             ))}
           </div>
 
-          <div className="d-flex justify-content-between mt-4">
-            <button className="btn btn-primary" onClick={handleAnterior} disabled={pagina === 1}>
+          <nav className="d-flex justify-content-between align-items-center mt-4" aria-label={`${title} pagination`}>
+            <button 
+              className="btn btn-primary" 
+              onClick={handleAnterior} 
+              disabled={pagina === 1}
+              aria-label={`Previous page of ${title}`}
+            >
               Previous
             </button>
-            <span>Page {pagina} of {totalPaginas}</span>
-            <button className="btn btn-primary" onClick={handleProximo} disabled={pagina === totalPaginas}>
+            <span aria-live="polite">Page {pagina} of {totalPaginas}</span>
+            <button 
+              className="btn btn-primary" 
+              onClick={handleProximo} 
+              disabled={pagina === totalPaginas}
+              aria-label={`Next page of ${title}`}
+            >
               Next
             </button>
-          </div>
+          </nav>
         </>
       )}
-    </div>
+    </section>
   );
 }
 

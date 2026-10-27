@@ -2,53 +2,212 @@
 <html lang="en" data-bs-theme="auto">
   <head>
     <meta charset="UTF-8" />
-   
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star Wars Gallery</title>
-
+    <title>Star Wars Gallery — Interactive SWAPI Characters, Planets, Starships & Vehicles</title>
 
     <meta name="description" 
-      content="Explore the ultimate Star Wars Gallery featuring HD images of characters, planets, starships and creatures. Powered by a fast API and optimized for fans, developers and collectors." />
+      content="Explore the interactive Star Wars Gallery powered by SWAPI. Browse HD images of Star Wars characters, planets, species, starships, and vehicles. Free visual database for fans and developers by Sergio Coitiño." />
 
     <meta name="keywords" 
-      content="Star Wars gallery, Star Wars images, HD Star Wars pictures, Star Wars characters, Star Wars planets, Star Wars ships, Star Wars API, Star Wars fan page, Star Wars database, Star Wars photo collection, Star Wars visual guide, sci-fi gallery, space characters images, SW images free" />
+      content="Star Wars gallery, SWAPI visual guide, Star Wars characters images, Star Wars planets, Star Wars starships, Star Wars vehicles, Star Wars species, Star Wars API React example, Star Wars database, HD Star Wars pictures, Sergio Coitiño" />
 
     <meta name="author" content="Sergio Coitiño" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#212529" />
 
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="Star Wars Gallery — HD Characters & Ships" />
-    <meta property="og:description" content="Browse high-quality Star Wars images from characters, planets and starships. Fast, responsive and ideal for fans." />
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp, Discord) -->
+    <meta property="og:site_name" content="Star Wars Gallery" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Star Wars Gallery — Interactive SWAPI Characters, Planets & Starships" />
+    <meta property="og:description" content="Browse high-quality Star Wars images of characters, planets, species, starships, and vehicles powered by SWAPI." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://starwarsgallery.netlify.app/" />
-    <meta property="og:image" content="https://starwarsgallery.netlify.app/cover.jpg" />
+    <meta property="og:image" content="https://starwarsgallery.netlify.app/preview.jpg" />
+    <meta property="og:image:alt" content="Star Wars Gallery preview showing characters, planets, and starships" />
 
-    <!-- Twitter Card -->
+    <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Star Wars Gallery — HD Images for Fans" />
+    <meta name="twitter:title" content="Star Wars Gallery — Interactive SWAPI Visual Database" />
     <meta name="twitter:description" 
-      content="A beautiful interactive gallery of Star Wars characters, planets and ships. Powered by modern web technologies." />
-    <meta name="twitter:image" content="https://starwarsgallery.netlify.app/cover.jpg" />
+      content="A fast, interactive gallery of Star Wars characters, planets, species, starships, and vehicles built with React and SWAPI." />
+    <meta name="twitter:image" content="https://starwarsgallery.netlify.app/preview.jpg" />
+    <meta name="twitter:image:alt" content="Star Wars Gallery — HD Images for Fans & Developers" />
 
-    <!-- Canonical URL -->
+    <!-- Canonical URL & AI Discovery -->
     <link rel="canonical" href="https://starwarsgallery.netlify.app/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="help" type="text/plain" title="LLMs Context" href="/llms.txt" />
 
+    <!-- Preconnect for Performance (Core Web Vitals) -->
+    <link rel="preconnect" href="https://swapi.dev" crossorigin />
+    <link rel="dns-prefetch" href="https://swapi.dev" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
+    <!-- Favicons & PWA Manifest -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Structured Data (JSON-LD) for Google Rich Results & AI / LLM Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://starwarsgallery.netlify.app/#website",
+          "url": "https://starwarsgallery.netlify.app/",
+          "name": "Star Wars Gallery",
+          "alternateName": "Interactive SWAPI Gallery",
+          "description": "Interactive visual database and HD image gallery for the Star Wars universe (Characters, Planets, Species, Starships, and Vehicles) powered by SWAPI.",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://starwarsgallery.netlify.app/#author"
+          }
+        },
+        {
+          "@type": ["WebApplication", "CollectionPage", "ImageGallery"],
+          "@id": "https://starwarsgallery.netlify.app/#app",
+          "name": "Star Wars Gallery — Interactive SWAPI Visual Database",
+          "url": "https://starwarsgallery.netlify.app/",
+          "applicationCategory": "EntertainmentApplication, ReferenceApplication",
+          "operatingSystem": "Web",
+          "isAccessibleForFree": true,
+          "image": "https://starwarsgallery.netlify.app/preview.jpg",
+          "description": "Explore and filter over 60 key visual resources from the Star Wars universe including Characters, Planets, Species, Starships, and Vehicles using the public SWAPI API.",
+          "author": {
+            "@id": "https://starwarsgallery.netlify.app/#author"
+          },
+          "about": [
+            { "@type": "Thing", "name": "Star Wars Characters" },
+            { "@type": "Thing", "name": "Star Wars Planets" },
+            { "@type": "Thing", "name": "Star Wars Species" },
+            { "@type": "Thing", "name": "Star Wars Starships" },
+            { "@type": "Thing", "name": "Star Wars Vehicles" },
+            { "@type": "WebAPI", "name": "SWAPI (The Star Wars API)", "url": "https://swapi.dev/" }
+          ],
+          "hasPart": [
+            {
+              "@type": "CollectionPage",
+              "name": "Star Wars Characters Gallery",
+              "url": "https://starwarsgallery.netlify.app/?category=Characters",
+              "description": "High-definition images of Star Wars characters including Luke Skywalker, Darth Vader, Leia Organa, Yoda, Obi-Wan Kenobi, and more."
+            },
+            {
+              "@type": "CollectionPage",
+              "name": "Star Wars Planets Gallery",
+              "url": "https://starwarsgallery.netlify.app/?category=Planets",
+              "description": "Visual catalog of Star Wars planets including Tatooine, Alderaan, Hoth, Dagobah, Naboo, Coruscant, and Endor."
+            },
+            {
+              "@type": "CollectionPage",
+              "name": "Star Wars Species Gallery",
+              "url": "https://starwarsgallery.netlify.app/?category=Species",
+              "description": "Visual guide to Star Wars species including Wookiees, Droids, Twi'leks, Ewoks, Rodians, and Hutts."
+            },
+            {
+              "@type": "CollectionPage",
+              "name": "Star Wars Starships Gallery",
+              "url": "https://starwarsgallery.netlify.app/?category=Starships",
+              "description": "HD gallery of iconic Star Wars starships including the Millennium Falcon, X-wing, Star Destroyer, Death Star, and TIE Advanced."
+            },
+            {
+              "@type": "CollectionPage",
+              "name": "Star Wars Vehicles Gallery",
+              "url": "https://starwarsgallery.netlify.app/?category=Vehicles",
+              "description": "Images of Star Wars ground and atmospheric vehicles including AT-AT, Snowspeeder, Sandcrawler, and Imperial Speeder Bike."
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://starwarsgallery.netlify.app/#author",
+          "name": "Sergio Coitiño",
+          "url": "https://sergio-coitino-portfolio.netlify.app/",
+          "sameAs": [
+            "https://github.com/SergioCoitino",
+            "https://www.linkedin.com/in/sergiocoitino/",
+            "https://sergio-coitino-portfolio.netlify.app/",
+            "https://charactersstar-wars.netlify.app/"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://starwarsgallery.netlify.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the Star Wars Gallery?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Star Wars Gallery is a free, interactive visual web application built with React and Vite that pairs real-time data from SWAPI (The Star Wars API) with high-definition images of Star Wars characters, planets, species, starships, and vehicles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I view images for SWAPI (The Star Wars API) resources?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Because SWAPI (swapi.dev) only provides JSON text data without images, Star Wars Gallery solves this by mapping each SWAPI resource ID to curated visual assets across 5 categories: Characters, Planets, Species, Starships, and Vehicles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Star Wars Gallery open source?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Star Wars Gallery was created by Sergio Coitiño under the MIT License and its source code is publicly available on GitHub at https://github.com/SergioCoitino/StarWars-Gallery."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
-
+    <!-- Bootstrap 5 JS Bundle (deferred) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Semantic Pre-Rendered Content for Search Engine Crawlers & AI Bots without JS execution -->
+      <header class="bg-dark text-white py-3">
+        <div class="container">
+          <strong>Star Wars Gallery — Interactive SWAPI Visual Database</strong>
+        </div>
+      </header>
+      <main class="container py-5">
+        <h1>Interactive SWAPI Gallery — Star Wars Characters, Planets, Species, Starships &amp; Vehicles</h1>
+        <p class="lead">
+          Explore and filter over 60 key visual resources from the Star Wars universe powered by the public SWAPI API and curated Wookieepedia images.
+        </p>
+        <nav aria-label="Star Wars Categories">
+          <h2>Browse Star Wars Categories</h2>
+          <ul>
+            <li><a href="/?category=Characters">Star Wars Characters Gallery (Luke Skywalker, Darth Vader, Leia Organa, Yoda, Obi-Wan Kenobi)</a></li>
+            <li><a href="/?category=Planets">Star Wars Planets Gallery (Tatooine, Alderaan, Hoth, Dagobah, Naboo, Coruscant)</a></li>
+            <li><a href="/?category=Species">Star Wars Species Gallery (Humans, Droids, Wookiees, Twi'leks, Ewoks, Hutts)</a></li>
+            <li><a href="/?category=Starships">Star Wars Starships Gallery (Millennium Falcon, X-wing, Star Destroyer, Death Star)</a></li>
+            <li><a href="/?category=Vehicles">Star Wars Vehicles Gallery (AT-AT, Snowspeeder, Sandcrawler, X-34 Landspeeder)</a></li>
+          </ul>
+        </nav>
+        <section>
+          <h2>About This Project</h2>
+          <p>
+            Developed by <a href="https://github.com/SergioCoitino">Sergio Coitiño</a> using React 19, Vite, and Bootstrap 5.
+            View the <a href="https://github.com/SergioCoitino/StarWars-Gallery">GitHub Repository</a>,
+            explore the <a href="https://charactersstar-wars.netlify.app/">Star Wars Characters App</a>,
+            or visit <a href="https://sergio-coitino-portfolio.netlify.app/">Sergio Coitiño's Portfolio</a>.
+          </p>
+        </section>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

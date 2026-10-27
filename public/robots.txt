@@ -1,0 +1,47 @@
+# robots.txt for Star Wars Gallery (https://starwarsgallery.netlify.app/)
+# Optimized for Search Engines (SEO) and AI / LLM Crawlers (GEO / AEO)
+
+User-agent: *
+Allow: /
+
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI & LLM Search Crawlers (ChatGPT, OpenAI Search, Perplexity, Claude, Gemini)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://starwarsgallery.netlify.app/sitemap.xml
+# AI Context File: https://starwarsgallery.netlify.app/llms.txt
