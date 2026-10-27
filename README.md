@@ -1,12 +1,12 @@
 # StarWars Gallery
 
-A modern and responsive gallery built with **React + Vite**, displaying characters, planets, and starships from the Star Wars universe. The project consumes public APIs to dynamically load visual and textual content, offering a clean interface and a smooth user experience.
+A modern and responsive visual gallery built with **React + Vite**, displaying characters, planets, species, starships, and vehicles from the Star Wars universe. The project consumes public APIs to dynamically load visual and textual content, offering a clean interface and a smooth user experience.
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Application
 
-Visit the deployed version on Netlify: **[https://starwarsgallery.netlify.app/](https://starwarsgallery.netlify.app/)**
+Visit the official web application: **[https://starwarsgallery.netlify.app/](https://starwarsgallery.netlify.app/)**
 
 ---
 
@@ -18,82 +18,39 @@ Visit the deployed version on Netlify: **[https://starwarsgallery.netlify.app/](
 
 ## ✨ Features
 
-* Based on the **Bootstrap Gallery** example, adapted and improved for React.
-* **Dynamic content** loaded from public Star Wars APIs.
-* **Responsive design** optimized for mobile and desktop.
-* **Clean interface** with intuitive navigation.
-* **High performance** powered by Vite.
-* **Reusable components** and organized structure.
+* **Interactive Categories**: Browse Characters, Planets, Species, Starships, and Vehicles.
+* **Dynamic Content**: Powered by real-time data from the Star Wars API (SWAPI) paired with curated high-definition images.
+* **Responsive Design**: Optimized for mobile, tablet, and desktop screens.
+* **Theme Switcher**: Supports Light, Dark, and Auto (system) modes.
+* **High Performance**: Fast rendering and optimized assets powered by React 19 and Vite.
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **React** (Components, Hooks)
-* **Vite** (Fast development/build tool)
+* **React 19** (Components, Hooks)
+* **Vite**
 * **JavaScript (ES6+)**
-* **CSS** / Custom styling
-* **Public APIs** for Star Wars data
+* **Bootstrap 5 & Custom CSS**
+* **SWAPI (The Star Wars API)**
 
 ---
 
-## 🔧 Installation
+## 🔒 Usage & Contributions
 
-Follow these steps to run the project locally:
-
-```bash
-# Clone the repository
-$ git clone https://github.com/SergioCoitino/StarWars-Gallery.git
-
-# Enter the project folder
-$ cd StarWars-Gallery
-
-# Install dependencies
-$ npm install
-
-# Start the development server
-$ npm run dev
-```
-
-The app will be available at:
-
-```
-http://localhost:5173/
-```
+This repository is maintained exclusively as a **personal portfolio showcase** by the author.
+* External contributions are **not accepted**.
+* Cloning, copying, redistributing, or republishing this project or its source code without prior written authorization is **strictly prohibited**.
 
 ---
 
-## 📦 Production Build
+## 📜 Copyright & License
 
-To create an optimized production build:
+**Copyright © 2025–2026 Sergio Coitiño. All Rights Reserved.**
 
-```bash
-npm run build
-```
+This project and its source code are proprietary. No part of this codebase may be reproduced, cloned, modified, or distributed without express written permission from the author.
 
-The output will be generated in the `dist/` folder.
-
----
-
-## 🌐 Deployment
-
-This project is deployed on **Netlify**. You can also deploy it using:
-
-* **Vercel**
-* **GitHub Pages**
-* **Any static hosting service**
-
----
-
-## 🤝 Contributions
-
-At this time, this project **does not accept external contributions**.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
+*Star Wars and all associated names and images are copyright Lucasfilm Ltd.*
 
 ---
 
@@ -101,13 +58,6 @@ This project is licensed under the **MIT License**.
 
 **Sergio Coitiño**
 
+* Portfolio: [https://sergio-coitino-portfolio.netlify.app/](https://sergio-coitino-portfolio.netlify.app/)
 * GitHub: [https://github.com/SergioCoitino](https://github.com/SergioCoitino)
 * LinkedIn: [https://www.linkedin.com/in/sergiocoitino/](https://www.linkedin.com/in/sergiocoitino/)
-
----
-
-## ⭐ Support the Project
-
-If you like this project, consider giving it a **star** on GitHub.
-
-Thank you for visiting this gallery!

@@ -35,7 +35,7 @@ function Text({ onResourceChange, activeResource }) {
           {/* 2. BOTONES DE ENLACES EXTERNOS */}
           <p className="mt-4">
             <a 
-              href="https://github.com/SergioCoitino/StarWars-Gallery" 
+              href="https://github.com/SergioCoitino" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn-primary my-2 mx-1"

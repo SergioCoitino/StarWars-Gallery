@@ -1,6 +1,6 @@
 # Star Wars Gallery — Interactive SWAPI Visual Database
 
-> Star Wars Gallery (https://starwarsgallery.netlify.app/) is a fast, open-source interactive visual gallery and encyclopedia for the Star Wars universe, built with React 19, Vite, and Bootstrap 5 by Sergio Coitiño. It connects real-time data from SWAPI (The Star Wars API) with a curated high-definition image collection of characters, planets, species, starships, and vehicles.
+> Star Wars Gallery (https://starwarsgallery.netlify.app/) is a fast, interactive visual gallery and encyclopedia for the Star Wars universe, created with React 19, Vite, and Bootstrap 5 by Sergio Coitiño. It connects real-time data from SWAPI (The Star Wars API) with a curated high-definition image collection of characters, planets, species, starships, and vehicles.
 
 ## Key Features & Use Cases
 
@@ -20,7 +20,7 @@
 - **Styling**: Bootstrap 5.3, Bootstrap Icons, Custom Responsive CSS
 - **API**: SWAPI (`https://swapi.dev/api/`)
 - **Hosting**: Netlify (`https://starwarsgallery.netlify.app/`)
-- **Source Code**: GitHub (`https://github.com/SergioCoitino/StarWars-Gallery`)
+- **License**: Copyright © Sergio Coitiño. All Rights Reserved.
 
 ## Author
 

@@ -2,7 +2,7 @@
 export const APP_TEXT = {
     title: "Interactive SWAPI Gallery",
     description1: "Explore and filter over 60 key resources from the Star Wars universe (Characters, Starships, Planets, Species, and Vehicles).",
-    githubButton: "View Source Code (GitHub)",
+    githubButton: "GitHub (Sergio Coitiño)",
     projectButton: "Star Wars Characters"
 };
 
