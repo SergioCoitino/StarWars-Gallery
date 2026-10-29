@@ -37,7 +37,7 @@ export const RESOURCES = {
         apiEndpoint: 'https://swapi.dev/api/starships/',
         imageFolder: '/assets/starships/',
         title: 'Star Wars Starships',
-        seoTitle: 'Star Wars Starships Gallery — Millennium Falcon, X-Wing & Star Destroyers',
+        seoTitle: 'Star Wars Starships Gallery — Millennium Falcon & X-Wing',
         seoDescription: 'High-resolution gallery of Star Wars starships including the Millennium Falcon, X-wing, TIE Advanced, Death Star, and Imperial Star Destroyer.'
     },
     'Vehicles': {
