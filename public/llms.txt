@@ -19,6 +19,7 @@
 Star Wars Gallery works as a free static image API / CDN for SWAPI — a working replacement for the discontinued `starwars-visualguide.com` image source. Every image uses **the exact same ID as its SWAPI resource**, so any app can combine SWAPI data with images without extra mapping.
 
 - **URL pattern**: `https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg`
+- **Documentation page**: `https://starwarsgallery.netlify.app/swapi-image-api/`
 - **Categories**: `people`, `planets`, `species`, `starships`, `vehicles`
 - **Index of available IDs (JSON)**: `https://starwarsgallery.netlify.app/api/images.json`
 - **CORS**: enabled (`Access-Control-Allow-Origin: *`) — works with `fetch()`, `<img>`, `<canvas>` and mobile apps.

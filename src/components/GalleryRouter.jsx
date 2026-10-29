@@ -3,6 +3,10 @@ import Text from './Text';
 import CardGallery from './CardGallery';
 import { RESOURCES, RESOURCE_KEYS } from './strings'; 
 
+// Homepage SEO values defined in index.html (kept for the default category)
+const HOME_TITLE = document.title;
+const HOME_DESCRIPTION = document.querySelector('meta[name="description"]')?.getAttribute('content');
+
 function getCategoryFromUrl() {
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('category');
@@ -28,10 +32,15 @@ function GalleryRouter() {
         if (!config) return;
 
         // Update document title & meta description for SEO
-        document.title = config.seoTitle || `${config.title} — Star Wars Gallery`;
+        // (the default category keeps the homepage title/description from index.html)
+        const isHome = activeResource === 'Characters';
+        document.title = isHome
+            ? HOME_TITLE
+            : config.seoTitle || `${config.title} — Star Wars Gallery`;
         const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription && config.seoDescription) {
-            metaDescription.setAttribute('content', config.seoDescription);
+        const description = isHome ? HOME_DESCRIPTION : config.seoDescription;
+        if (metaDescription && description) {
+            metaDescription.setAttribute('content', description);
         }
 
         // Update canonical URL

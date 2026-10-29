@@ -43,6 +43,7 @@ https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg
 | `vehicles` | [`/assets/vehicles/14.jpg`](https://starwarsgallery.netlify.app/assets/vehicles/14.jpg) |
 
 * **Available IDs (JSON):** [`/api/images.json`](https://starwarsgallery.netlify.app/api/images.json)
+* **Full documentation:** [`/swapi-image-api/`](https://starwarsgallery.netlify.app/swapi-image-api/)
 * **CORS enabled** — usable from any website or app.
 * **Missing images return `404`** — ideal for `<img onError>` fallbacks.
 

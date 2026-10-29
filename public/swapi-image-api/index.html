@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWAPI Images API — Free Star Wars API Images (People, Planets, Starships) | Star Wars Gallery</title>
+    <meta name="description" content="Free image API for SWAPI (The Star Wars API). Get images for people, planets, species, starships and vehicles using the same SWAPI IDs. 238 images, CORS enabled, no API key." />
+    <meta name="keywords" content="SWAPI images, SWAPI image API, Star Wars API images, swapi.dev images, Star Wars images API, swapi pictures, starwars-visualguide alternative, Star Wars characters images API, free Star Wars image API" />
+    <meta name="author" content="Sergio Coitiño" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="theme-color" content="#212529" />
+    <link rel="canonical" href="https://starwarsgallery.netlify.app/swapi-image-api/" />
+
+    <meta property="og:site_name" content="Star Wars Gallery" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="SWAPI Images API — Free Images for The Star Wars API" />
+    <meta property="og:description" content="Images for every SWAPI resource using the same IDs. CORS enabled, no API key, 238 images." />
+    <meta property="og:url" content="https://starwarsgallery.netlify.app/swapi-image-api/" />
+    <meta property="og:image" content="https://starwarsgallery.netlify.app/preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SWAPI Images API — Free Images for The Star Wars API" />
+    <meta name="twitter:description" content="Images for every SWAPI resource using the same IDs. CORS enabled, no API key." />
+    <meta name="twitter:image" content="https://starwarsgallery.netlify.app/preview.jpg" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+      .thumb { width: 100%; height: 160px; object-fit: cover; border-radius: .5rem; }
+      pre { white-space: pre-wrap; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebAPI",
+          "@id": "https://starwarsgallery.netlify.app/#image-api",
+          "name": "SWAPI Images API",
+          "alternateName": ["Star Wars API Images", "SWAPI Image API", "Star Wars Gallery Image API"],
+          "description": "Free static image API for SWAPI (The Star Wars API). Images use the same IDs as SWAPI resources: https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg for people, planets, species, starships and vehicles. CORS enabled, no API key required.",
+          "url": "https://starwarsgallery.netlify.app/swapi-image-api/",
+          "documentation": "https://starwarsgallery.netlify.app/swapi-image-api/",
+          "isAccessibleForFree": true,
+          "termsOfService": "https://starwarsgallery.netlify.app/swapi-image-api/#terms",
+          "provider": {
+            "@type": "Person",
+            "name": "Sergio Coitiño",
+            "url": "https://sergio-coitino-portfolio.netlify.app/"
+          }
+        },
+        {
+          "@type": "TechArticle",
+          "headline": "SWAPI Images API — Free Images for The Star Wars API",
+          "url": "https://starwarsgallery.netlify.app/swapi-image-api/",
+          "image": "https://starwarsgallery.netlify.app/preview.jpg",
+          "datePublished": "2026-10-29",
+          "dateModified": "2026-10-29",
+          "inLanguage": "en",
+          "author": { "@type": "Person", "name": "Sergio Coitiño", "url": "https://sergio-coitino-portfolio.netlify.app/" },
+          "about": { "@type": "WebAPI", "name": "SWAPI (The Star Wars API)", "url": "https://swapi.dev/" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Star Wars Gallery", "item": "https://starwarsgallery.netlify.app/" },
+            { "@type": "ListItem", "position": 2, "name": "SWAPI Images API", "item": "https://starwarsgallery.netlify.app/swapi-image-api/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does SWAPI (The Star Wars API) provide images?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. SWAPI only returns JSON text data. To show images, use the free SWAPI Images API at https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg, which uses the same IDs as SWAPI." }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I get an image for a SWAPI character, planet or starship?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Take the ID at the end of the SWAPI URL (for example 1 in https://swapi.dev/api/people/1/) and request https://starwarsgallery.netlify.app/assets/people/1.jpg. Categories are people, planets, species, starships and vehicles." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there an alternative to starwars-visualguide.com images?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. The SWAPI Images API at https://starwarsgallery.netlify.app/swapi-image-api/ serves images for SWAPI people, planets, species, starships and vehicles by ID, with CORS enabled and no API key." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the SWAPI Images API require an API key or have CORS restrictions?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No API key is required and CORS is enabled (Access-Control-Allow-Origin: *), so images can be used from any website, React/Vue/Angular app, canvas or mobile app." }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens if an image does not exist for a SWAPI ID?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The API returns HTTP 404, so you can show a fallback with the img onError handler. The full list of available IDs is at https://starwarsgallery.netlify.app/api/images.json." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="navbar bg-dark shadow-sm">
+      <div class="container">
+        <a href="/" class="navbar-brand text-white"><strong>Star Wars Gallery</strong></a>
+        <nav aria-label="Main">
+          <a href="/" class="link-light me-3">Gallery</a>
+          <a href="/api/images.json" class="link-light">images.json</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container py-5" style="max-width: 960px;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small">
+          <li class="breadcrumb-item"><a href="/">Star Wars Gallery</a></li>
+          <li class="breadcrumb-item active" aria-current="page">SWAPI Images API</li>
+        </ol>
+      </nav>
+
+      <h1 class="mb-3">SWAPI Images API — Free Images for The Star Wars API</h1>
+      <p class="lead">
+        <a href="https://swapi.dev/">SWAPI</a> returns only JSON text — no pictures. This free API serves
+        <strong>238 images</strong> for SWAPI <strong>people, planets, species, starships and vehicles</strong>,
+        using <strong>exactly the same IDs as SWAPI</strong>. No API key, CORS enabled.
+      </p>
+
+      <div class="bg-body-tertiary border rounded p-3 mb-4">
+        <p class="mb-1 small text-body-secondary">URL pattern</p>
+        <code class="fs-5">https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg</code>
+      </div>
+
+      <h2 class="h3 mt-5">Quick example</h2>
+      <div class="row row-cols-2 row-cols-md-5 g-3 mb-3">
+        <figure class="col mb-0"><img class="thumb" src="/assets/people/1.jpg" alt="Luke Skywalker — SWAPI people 1" loading="lazy" /><figcaption class="small mt-1"><code>people/1</code> Luke Skywalker</figcaption></figure>
+        <figure class="col mb-0"><img class="thumb" src="/assets/planets/1.jpg" alt="Tatooine — SWAPI planets 1" loading="lazy" /><figcaption class="small mt-1"><code>planets/1</code> Tatooine</figcaption></figure>
+        <figure class="col mb-0"><img class="thumb" src="/assets/species/3.jpg" alt="Wookiee — SWAPI species 3" loading="lazy" /><figcaption class="small mt-1"><code>species/3</code> Wookiee</figcaption></figure>
+        <figure class="col mb-0"><img class="thumb" src="/assets/starships/10.jpg" alt="Millennium Falcon — SWAPI starships 10" loading="lazy" /><figcaption class="small mt-1"><code>starships/10</code> Millennium Falcon</figcaption></figure>
+        <figure class="col mb-0"><img class="thumb" src="/assets/vehicles/14.jpg" alt="Snowspeeder — SWAPI vehicles 14" loading="lazy" /><figcaption class="small mt-1"><code>vehicles/14</code> Snowspeeder</figcaption></figure>
+      </div>
+
+      <h2 class="h3 mt-5">Endpoints</h2>
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">SWAPI endpoint</th><th scope="col">Image URL</th><th scope="col">Images</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>People</td><td><code>swapi.dev/api/people/{id}/</code></td><td><code>/assets/people/{id}.jpg</code></td><td>87</td></tr>
+            <tr><td>Planets</td><td><code>swapi.dev/api/planets/{id}/</code></td><td><code>/assets/planets/{id}.jpg</code></td><td>38</td></tr>
+            <tr><td>Species</td><td><code>swapi.dev/api/species/{id}/</code></td><td><code>/assets/species/{id}.jpg</code></td><td>37</td></tr>
+            <tr><td>Starships</td><td><code>swapi.dev/api/starships/{id}/</code></td><td><code>/assets/starships/{id}.jpg</code></td><td>37</td></tr>
+            <tr><td>Vehicles</td><td><code>swapi.dev/api/vehicles/{id}/</code></td><td><code>/assets/vehicles/{id}.jpg</code></td><td>39</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Full list of available IDs (JSON): <a href="/api/images.json"><code>https://starwarsgallery.netlify.app/api/images.json</code></a>.
+        Works with SWAPI mirrors that keep the same IDs: <code>swapi.dev</code>, <code>swapi.py4e.com</code>, <code>swapi.tech</code>.
+      </p>
+
+      <h2 class="h3 mt-5">How to use it</h2>
+
+      <h3 class="h5 mt-4">JavaScript</h3>
+<pre class="bg-dark text-light p-3 rounded"><code>const getSwapiImage = (category, swapiUrl) =&gt; {
+  const id = swapiUrl.split('/').filter(Boolean).pop();
+  return `https://starwarsgallery.netlify.app/assets/${category}/${id}.jpg`;
+};
+
+const res = await fetch('https://swapi.dev/api/people/1/');
+const luke = await res.json();
+const image = getSwapiImage('people', luke.url);
+// "https://starwarsgallery.netlify.app/assets/people/1.jpg"</code></pre>
+
+      <h3 class="h5 mt-4">React (with fallback)</h3>
+<pre class="bg-dark text-light p-3 rounded"><code>function SwapiImage({ category, id, name }) {
+  const [src, setSrc] = React.useState(
+    `https://starwarsgallery.netlify.app/assets/${category}/${id}.jpg`
+  );
+  return (
+    &lt;img
+      src={src}
+      alt={name}
+      loading="lazy"
+      onError={() =&gt; setSrc('/placeholder.jpg')}
+    /&gt;
+  );
+}</code></pre>
+
+      <h3 class="h5 mt-4">Python</h3>
+<pre class="bg-dark text-light p-3 rounded"><code>import requests
+
+planet = requests.get("https://swapi.dev/api/planets/1/").json()
+planet_id = planet["url"].rstrip("/").split("/")[-1]
+image_url = f"https://starwarsgallery.netlify.app/assets/planets/{planet_id}.jpg"</code></pre>
+
+      <h3 class="h5 mt-4">HTML</h3>
+<pre class="bg-dark text-light p-3 rounded"><code>&lt;img src="https://starwarsgallery.netlify.app/assets/starships/10.jpg" alt="Millennium Falcon"&gt;</code></pre>
+
+      <h2 class="h3 mt-5">Features</h2>
+      <ul>
+        <li><strong>Same IDs as SWAPI</strong> — no mapping table needed.</li>
+        <li><strong>CORS enabled</strong> (<code>Access-Control-Allow-Origin: *</code>) — works with <code>fetch()</code>, <code>&lt;img&gt;</code>, <code>&lt;canvas&gt;</code> and mobile apps.</li>
+        <li><strong>No API key</strong> and no sign-up.</li>
+        <li><strong>Real HTTP 404</strong> for missing images, so <code>onError</code> fallbacks work.</li>
+        <li><strong>Fast static CDN</strong> hosting with browser caching.</li>
+        <li>A drop-in alternative for projects that used the old <code>starwars-visualguide.com</code> image URLs.</li>
+      </ul>
+
+      <h2 class="h3 mt-5">FAQ</h2>
+      <h3 class="h6 mt-3">Does SWAPI provide images?</h3>
+      <p>No. SWAPI only returns JSON. This API fills that gap using the same resource IDs.</p>
+      <h3 class="h6 mt-3">What if an ID has no image?</h3>
+      <p>The server returns <code>404</code>. Check <a href="/api/images.json">images.json</a> for the list of available IDs.</p>
+      <h3 class="h6 mt-3">Can I use it in commercial projects?</h3>
+      <p>The API is free for personal, educational and portfolio projects. See the terms below.</p>
+
+      <h2 id="terms" class="h3 mt-5">Terms &amp; credits</h2>
+      <p class="small text-body-secondary">
+        Unofficial fan project, not affiliated with Lucasfilm or Disney. Star Wars and all associated names and images are
+        copyright Lucasfilm Ltd. Images were collected from <a href="https://starwars.fandom.com/wiki/Main_Page">Wookieepedia</a>.
+        Data comes from <a href="https://swapi.dev/">SWAPI</a>. Please use the images for non-commercial, educational and
+        portfolio purposes. The service is provided as-is, without guarantees of availability.
+      </p>
+
+      <div class="text-center border-top pt-4 mt-5">
+        <p class="text-body-secondary mb-2">This API is free. If it helped your project, consider supporting the developer and the hosting costs.</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=GS4USLXPYWNSN" target="_blank" rel="noopener noreferrer" class="btn btn-warning">Donate with PayPal</a>
+        <a href="/" class="btn btn-outline-light ms-2">Open the Star Wars Gallery</a>
+      </div>
+    </main>
+
+    <footer class="container py-4 small text-body-secondary">
+      Built by <a href="https://sergio-coitino-portfolio.netlify.app/">Sergio Coitiño</a> ·
+      <a href="https://github.com/SergioCoitino">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/sergiocoitino/">LinkedIn</a>
+    </footer>
+  </body>
+</html>

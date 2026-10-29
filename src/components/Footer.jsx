@@ -23,7 +23,9 @@ function Footer() {
           <a href="/?category=Planets" className="me-2">Planets</a>
           <a href="/?category=Species" className="me-2">Species</a>
           <a href="/?category=Starships" className="me-2">Starships</a>
-          <a href="/?category=Vehicles">Vehicles</a>
+          <a href="/?category=Vehicles" className="me-2">Vehicles</a>
+          <span className="me-2">|</span>
+          <a href="/swapi-image-api/">SWAPI Images API</a>
         </nav>
       </div>
     </footer>

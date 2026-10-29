@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star Wars Gallery — Interactive SWAPI Characters, Planets, Starships & Vehicles</title>
+    <title>Star Wars Gallery — SWAPI Images API & HD Star Wars Characters, Planets, Starships</title>
 
     <meta name="description" 
-      content="Explore the interactive Star Wars Gallery powered by SWAPI. Browse HD images of Star Wars characters, planets, species, starships, and vehicles. Free visual database for fans and developers by Sergio Coitiño." />
+      content="Free SWAPI images API and interactive Star Wars gallery. HD images of Star Wars characters, planets, species, starships and vehicles using the same IDs as SWAPI. CORS enabled, no API key." />
 
     <meta name="keywords" 
-      content="Star Wars gallery, SWAPI visual guide, Star Wars characters images, Star Wars planets, Star Wars starships, Star Wars vehicles, Star Wars species, Star Wars API React example, Star Wars database, HD Star Wars pictures, Sergio Coitiño" />
+      content="SWAPI images, SWAPI image API, Star Wars API images, Star Wars gallery, Star Wars characters images, Star Wars planets, Star Wars starships, Star Wars vehicles, Star Wars species, swapi.dev images, starwars-visualguide alternative, Sergio Coitiño" />
 
     <meta name="author" content="Sergio Coitiño" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -18,8 +18,8 @@
     <!-- Open Graph (Facebook, LinkedIn, WhatsApp, Discord) -->
     <meta property="og:site_name" content="Star Wars Gallery" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="Star Wars Gallery — Interactive SWAPI Characters, Planets & Starships" />
-    <meta property="og:description" content="Browse high-quality Star Wars images of characters, planets, species, starships, and vehicles powered by SWAPI." />
+    <meta property="og:title" content="Star Wars Gallery — SWAPI Images API & HD Star Wars Gallery" />
+    <meta property="og:description" content="Free images for SWAPI: characters, planets, species, starships and vehicles using the same SWAPI IDs. CORS enabled, no API key." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://starwarsgallery.netlify.app/" />
     <meta property="og:image" content="https://starwarsgallery.netlify.app/preview.jpg" />
@@ -27,9 +27,9 @@
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Star Wars Gallery — Interactive SWAPI Visual Database" />
+    <meta name="twitter:title" content="Star Wars Gallery — SWAPI Images API & HD Star Wars Gallery" />
     <meta name="twitter:description" 
-      content="A fast, interactive gallery of Star Wars characters, planets, species, starships, and vehicles built with React and SWAPI." />
+      content="Free images for SWAPI (The Star Wars API) plus an interactive gallery of characters, planets, species, starships and vehicles." />
     <meta name="twitter:image" content="https://starwarsgallery.netlify.app/preview.jpg" />
     <meta name="twitter:image:alt" content="Star Wars Gallery — HD Images for Fans & Developers" />
 
@@ -127,10 +127,10 @@
         {
           "@type": "WebAPI",
           "@id": "https://starwarsgallery.netlify.app/#image-api",
-          "name": "SWAPI Image API — Star Wars Gallery",
+          "name": "SWAPI Images API",
           "description": "Free static image API for SWAPI (The Star Wars API). Images use the same IDs as SWAPI resources: https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg for people, planets, species, starships and vehicles. CORS enabled, no API key required.",
-          "url": "https://starwarsgallery.netlify.app/#image-api",
-          "documentation": "https://starwarsgallery.netlify.app/llms.txt",
+          "url": "https://starwarsgallery.netlify.app/swapi-image-api/",
+          "documentation": "https://starwarsgallery.netlify.app/swapi-image-api/",
           "isAccessibleForFree": true,
           "provider": {
             "@id": "https://starwarsgallery.netlify.app/#author"
@@ -224,6 +224,7 @@
             <code>https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg</code>
             (categories: people, planets, species, starships, vehicles). CORS enabled, no API key required.
             List of available IDs: <a href="/api/images.json">/api/images.json</a>.
+            <a href="/swapi-image-api/">Read the full SWAPI Images API documentation</a>.
           </p>
         </section>
         <section>

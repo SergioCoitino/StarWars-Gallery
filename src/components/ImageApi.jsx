@@ -63,6 +63,9 @@ function ImageApi() {
         <li>
           List of all available IDs: <a href="/api/images.json" target="_blank" rel="noopener noreferrer"><code>/api/images.json</code></a>
         </li>
+        <li>
+          Full documentation with JavaScript, React and Python examples: <a href="/swapi-image-api/">SWAPI Images API docs</a>
+        </li>
         <li>Missing images return HTTP <code>404</code>, so <code>&lt;img onError&gt;</code> fallbacks work correctly.</li>
         <li>Compatible with SWAPI mirrors that keep the same IDs (<code>swapi.dev</code>, <code>swapi.py4e.com</code>, <code>swapi.tech</code>).</li>
       </ul>
