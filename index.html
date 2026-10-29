@@ -125,6 +125,18 @@
           ]
         },
         {
+          "@type": "WebAPI",
+          "@id": "https://starwarsgallery.netlify.app/#image-api",
+          "name": "SWAPI Image API — Star Wars Gallery",
+          "description": "Free static image API for SWAPI (The Star Wars API). Images use the same IDs as SWAPI resources: https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg for people, planets, species, starships and vehicles. CORS enabled, no API key required.",
+          "url": "https://starwarsgallery.netlify.app/#image-api",
+          "documentation": "https://starwarsgallery.netlify.app/llms.txt",
+          "isAccessibleForFree": true,
+          "provider": {
+            "@id": "https://starwarsgallery.netlify.app/#author"
+          }
+        },
+        {
           "@type": "Person",
           "@id": "https://starwarsgallery.netlify.app/#author",
           "name": "Sergio Coitiño",
@@ -154,6 +166,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Because SWAPI (swapi.dev) only provides JSON text data without images, Star Wars Gallery solves this by mapping each SWAPI resource ID to curated visual assets across 5 categories: Characters, Planets, Species, Starships, and Vehicles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where can I get images for SWAPI (The Star Wars API)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Star Wars Gallery provides a free image API for SWAPI. Use https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg, where category is people, planets, species, starships or vehicles and id is the same ID used by SWAPI. CORS is enabled and the list of available IDs is at https://starwarsgallery.netlify.app/api/images.json."
               }
             },
             {
@@ -197,6 +217,15 @@
             <li><a href="/?category=Vehicles">Star Wars Vehicles Gallery (AT-AT, Snowspeeder, Sandcrawler, X-34 Landspeeder)</a></li>
           </ul>
         </nav>
+        <section>
+          <h2>SWAPI Image API</h2>
+          <p>
+            Free images for SWAPI (The Star Wars API). Every image uses the same ID as its SWAPI resource:
+            <code>https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg</code>
+            (categories: people, planets, species, starships, vehicles). CORS enabled, no API key required.
+            List of available IDs: <a href="/api/images.json">/api/images.json</a>.
+          </p>
+        </section>
         <section>
           <h2>About This Project</h2>
           <p>

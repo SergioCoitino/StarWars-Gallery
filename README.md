@@ -26,6 +26,35 @@ Visit the official web application: **[https://starwarsgallery.netlify.app/](htt
 
 ---
 
+## 🖼️ SWAPI Image API
+
+The site also works as a **free image API for [SWAPI](https://swapi.dev/)**. Every image uses the same ID as its SWAPI resource:
+
+```
+https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg
+```
+
+| Category | Example |
+| --- | --- |
+| `people` | [`/assets/people/1.jpg`](https://starwarsgallery.netlify.app/assets/people/1.jpg) |
+| `planets` | [`/assets/planets/1.jpg`](https://starwarsgallery.netlify.app/assets/planets/1.jpg) |
+| `species` | [`/assets/species/3.jpg`](https://starwarsgallery.netlify.app/assets/species/3.jpg) |
+| `starships` | [`/assets/starships/10.jpg`](https://starwarsgallery.netlify.app/assets/starships/10.jpg) |
+| `vehicles` | [`/assets/vehicles/14.jpg`](https://starwarsgallery.netlify.app/assets/vehicles/14.jpg) |
+
+* **Available IDs (JSON):** [`/api/images.json`](https://starwarsgallery.netlify.app/api/images.json)
+* **CORS enabled** — usable from any website or app.
+* **Missing images return `404`** — ideal for `<img onError>` fallbacks.
+
+```js
+const getSwapiImage = (category, swapiUrl) => {
+  const id = swapiUrl.split('/').filter(Boolean).pop();
+  return `https://starwarsgallery.netlify.app/assets/${category}/${id}.jpg`;
+};
+```
+
+---
+
 ## 🛠️ Technologies Used
 
 * **React 19** (Components, Hooks)

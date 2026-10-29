@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import GalleryRouter from './components/GalleryRouter'
 import ThemeToggle from './components/ThemeToogle'
+import ImageApi from './components/ImageApi'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Header/>
           <main>
             <GalleryRouter/>
+            <ImageApi/>
           </main>
           <Footer/>    
           <ThemeToggle/>  

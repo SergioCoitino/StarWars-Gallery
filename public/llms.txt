@@ -14,6 +14,39 @@
 - **Dark / Light / Auto Theme**: Built-in Bootstrap 5 theme switcher supporting system preference.
 - **Developer Reference**: Serves as a clean reference implementation for developers learning how to consume paginated REST APIs (SWAPI) in React with Vite and match API IDs with static visual assets.
 
+## SWAPI Image API (Free Images for The Star Wars API)
+
+Star Wars Gallery works as a free static image API / CDN for SWAPI — a working replacement for the discontinued `starwars-visualguide.com` image source. Every image uses **the exact same ID as its SWAPI resource**, so any app can combine SWAPI data with images without extra mapping.
+
+- **URL pattern**: `https://starwarsgallery.netlify.app/assets/{category}/{id}.jpg`
+- **Categories**: `people`, `planets`, `species`, `starships`, `vehicles`
+- **Index of available IDs (JSON)**: `https://starwarsgallery.netlify.app/api/images.json`
+- **CORS**: enabled (`Access-Control-Allow-Origin: *`) — works with `fetch()`, `<img>`, `<canvas>` and mobile apps.
+- **Missing images**: return HTTP `404`, so `<img onError>` fallbacks work correctly.
+- **No API key, no rate-limit configuration required.**
+
+| SWAPI resource | Image URL |
+| --- | --- |
+| `https://swapi.dev/api/people/1/` (Luke Skywalker) | `https://starwarsgallery.netlify.app/assets/people/1.jpg` |
+| `https://swapi.dev/api/planets/1/` (Tatooine) | `https://starwarsgallery.netlify.app/assets/planets/1.jpg` |
+| `https://swapi.dev/api/species/3/` (Wookiee) | `https://starwarsgallery.netlify.app/assets/species/3.jpg` |
+| `https://swapi.dev/api/starships/10/` (Millennium Falcon) | `https://starwarsgallery.netlify.app/assets/starships/10.jpg` |
+| `https://swapi.dev/api/vehicles/14/` (Snowspeeder) | `https://starwarsgallery.netlify.app/assets/vehicles/14.jpg` |
+
+Example (JavaScript):
+
+```js
+const getSwapiImage = (category, swapiUrl) => {
+  const id = swapiUrl.split('/').filter(Boolean).pop();
+  return `https://starwarsgallery.netlify.app/assets/${category}/${id}.jpg`;
+};
+
+getSwapiImage('people', 'https://swapi.dev/api/people/1/');
+// => "https://starwarsgallery.netlify.app/assets/people/1.jpg"
+```
+
+Works with SWAPI mirrors that keep the same IDs (`swapi.dev`, `swapi.py4e.com`, `swapi.tech`).
+
 ## Technical Stack
 
 - **Frontend**: React 19, Vite 7, JavaScript (ES6+)

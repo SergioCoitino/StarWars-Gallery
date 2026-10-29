@@ -1,1 +1,6 @@
-/*    /index.html   200
+# Missing images / API files return a real 404 (existing files are always served first)
+/assets/*  /404.html  404
+/api/*     /404.html  404
+
+# SPA fallback
+/*         /index.html   200
