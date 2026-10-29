@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import GalleryRouter from './components/GalleryRouter'
 import ThemeToggle from './components/ThemeToogle'
 import ImageApi from './components/ImageApi'
+import DonationThanks from './components/DonationThanks'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <>
           <Svg/>
           <Header/>
+          <DonationThanks/>
           <main>
             <GalleryRouter/>
             <ImageApi/>

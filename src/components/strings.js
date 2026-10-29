@@ -3,8 +3,12 @@ export const APP_TEXT = {
     title: "Interactive SWAPI Gallery",
     description1: "Explore and filter over 60 key resources from the Star Wars universe (Characters, Starships, Planets, Species, and Vehicles).",
     githubButton: "GitHub (Sergio Coitiño)",
-    projectButton: "Star Wars App"
+    projectButton: "Star Wars App",
+    donateButton: "Support the Developer"
 };
+
+// --- DOACIÓN (PayPal) ---
+export const PAYPAL_DONATE_URL = 'https://www.paypal.com/donate/?hosted_button_id=GS4USLXPYWNSN';
 
 // --- CONFIGURACIÓN DE RECURSOS SWAPI ---
 export const RESOURCES = {

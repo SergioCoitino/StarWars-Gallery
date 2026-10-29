@@ -1,4 +1,5 @@
 import React from 'react';
+import { PAYPAL_DONATE_URL } from './strings';
 
 const BASE_URL = 'https://starwarsgallery.netlify.app';
 
@@ -65,6 +66,16 @@ function ImageApi() {
         <li>Missing images return HTTP <code>404</code>, so <code>&lt;img onError&gt;</code> fallbacks work correctly.</li>
         <li>Compatible with SWAPI mirrors that keep the same IDs (<code>swapi.dev</code>, <code>swapi.py4e.com</code>, <code>swapi.tech</code>).</li>
       </ul>
+
+      <div className="text-center mt-4">
+        <p className="text-body-secondary mb-2">
+          This image API is free. If it helped your project, consider supporting the developer and the hosting costs.
+        </p>
+        <a href={PAYPAL_DONATE_URL} target="_blank" rel="noopener noreferrer" className="btn btn-warning">
+          <i className="bi bi-paypal me-1" aria-hidden="true"></i>
+          Donate with PayPal
+        </a>
+      </div>
     </section>
   );
 }

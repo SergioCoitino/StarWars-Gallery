@@ -1,5 +1,5 @@
 import React from 'react';
-import { APP_TEXT, RESOURCE_KEYS } from './strings'; 
+import { APP_TEXT, RESOURCE_KEYS, PAYPAL_DONATE_URL } from './strings'; 
 
 function Text({ onResourceChange, activeResource }) {
   
@@ -50,6 +50,16 @@ function Text({ onResourceChange, activeResource }) {
               className="btn btn-secondary my-2 mx-1"
             >
               {text.projectButton}
+            </a>
+
+            <a 
+              href={PAYPAL_DONATE_URL} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn btn-warning my-2 mx-1"
+            >
+              <i className="bi bi-paypal me-1" aria-hidden="true"></i>
+              {text.donateButton}
             </a>
           </p>
         </div>
