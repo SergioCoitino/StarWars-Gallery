@@ -77,7 +77,11 @@ function ImageApi() {
         <p className="text-body-secondary mb-2">
           This image API is free. If it helped your project, consider supporting the developer and the hosting costs.
         </p>
-        <a href={PAYPAL_DONATE_URL} target="_blank" rel="noopener noreferrer" className="btn btn-warning">
+        <a href="https://buymeacoffee.com/csergioferh" target="_blank" rel="noopener noreferrer" className="btn btn-warning me-2 mb-2">
+          <i className="bi bi-cup-hot me-1" aria-hidden="true"></i>
+          Buy Me a Coffee
+        </a>
+        <a href={PAYPAL_DONATE_URL} target="_blank" rel="noopener noreferrer" className="btn btn-outline-warning mb-2">
           <i className="bi bi-paypal me-1" aria-hidden="true"></i>
           Donate with PayPal
         </a>

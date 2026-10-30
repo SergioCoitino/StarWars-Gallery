@@ -10,7 +10,7 @@ function Footer() {
         <p className="mb-1">
           Developed by <a href="https://github.com/SergioCoitino" target="_blank" rel="noopener noreferrer">Sergio Coitiño</a> |{' '}
           <a href="https://sergio-coitino-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</a> |{' '}
-          <a href="https://www.linkedin.com/in/sergiocoitino/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sergiocoitino/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://buymeacoffee.com/csergioferh" target="_blank" rel="noopener noreferrer" className="text-warning fw-semibold">Buy Me a Coffee ☕</a>
         </p>
         <p className="mb-2">
           Star Wars and all associated names and/or images are copyright Lucasfilm Ltd. Images were freely collected from{' '}
