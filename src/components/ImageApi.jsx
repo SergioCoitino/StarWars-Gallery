@@ -68,6 +68,9 @@ function ImageApi() {
         </li>
         <li>Missing images return HTTP <code>404</code>, so <code>&lt;img onError&gt;</code> fallbacks work correctly.</li>
         <li>Compatible with SWAPI mirrors that keep the same IDs (<code>swapi.dev</code>, <code>swapi.py4e.com</code>, <code>swapi.tech</code>).</li>
+        <li>
+          Live real-world demo: see it integrated in the <a href="https://star-warsapp.netlify.app/" target="_blank" rel="noopener noreferrer">Star Wars App</a>.
+        </li>
       </ul>
 
       <div className="text-center mt-4">

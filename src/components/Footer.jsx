@@ -17,7 +17,7 @@ function Footer() {
           <a href="https://starwars.fandom.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Wookieepedia</a> and data from{' '}
           <a href="https://swapi.dev/" target="_blank" rel="noopener noreferrer">SWAPI</a>.
         </p>
-        <nav aria-label="Footer category links" className="small">
+        <nav aria-label="Footer category links" className="small mb-2">
           <span>Categories: </span>
           <a href="/?category=Characters" className="me-2">Characters</a>
           <a href="/?category=Planets" className="me-2">Planets</a>
@@ -27,6 +27,9 @@ function Footer() {
           <span className="me-2">|</span>
           <a href="/swapi-image-api/">SWAPI Images API</a>
         </nav>
+        <p className="mb-0 small text-body-secondary">
+          Featured in production: <a href="https://star-warsapp.netlify.app/" target="_blank" rel="noopener noreferrer">Star Wars App</a> (consumes this visual API for character, starship &amp; planet stats).
+        </p>
       </div>
     </footer>
   )
