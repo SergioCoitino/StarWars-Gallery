@@ -8,6 +8,8 @@ A modern and responsive visual gallery built with **React + Vite**, displaying c
 
 Visit the official web application: **[https://starwarsgallery.netlify.app/](https://starwarsgallery.netlify.app/)**
 
+* **Companion Application:** [Star Wars App](https://star-warsapp.netlify.app/) (consumes this visual API for character, starship, and planet stats)
+
 ---
 
 ## 📸 Preview
