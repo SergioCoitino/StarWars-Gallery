@@ -33,13 +33,14 @@ function Text({ onResourceChange, activeResource }) {
           </nav>
           
           {/* 2. BOTONES DE ENLACES EXTERNOS */}
-          <p className="mt-4">
+          <div className="d-flex flex-wrap justify-content-center gap-2 mt-4">
             <a 
               href="https://github.com/SergioCoitino" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn btn-primary my-2 mx-1"
+              className="btn btn-outline-light px-3 py-2"
             >
+              <i className="bi bi-github me-2" aria-hidden="true"></i>
               {text.githubButton}
             </a>
             
@@ -47,8 +48,9 @@ function Text({ onResourceChange, activeResource }) {
               href="https://star-warsapp.netlify.app/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn btn-secondary my-2 mx-1"
+              className="btn btn-primary px-3 py-2"
             >
+              <i className="bi bi-rocket-takeoff me-2" aria-hidden="true"></i>
               {text.projectButton}
             </a>
 
@@ -56,12 +58,12 @@ function Text({ onResourceChange, activeResource }) {
               href={PAYPAL_DONATE_URL} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn btn-warning my-2 mx-1"
+              className="btn btn-outline-warning px-3 py-2"
             >
-              <i className="bi bi-paypal me-1" aria-hidden="true"></i>
+              <i className="bi bi-paypal me-2" aria-hidden="true"></i>
               {text.donateButton}
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </section>

@@ -75,25 +75,39 @@
         display: block !important;
       }
 
-.btn-primary{
-  margin: 0.12rem;
+/* Reset de links: remove qualquer sublinhado indesejado */
+a {
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
-.btn-secondary{
-  margin: 0.12rem;
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+/* Estilo consistente para todos os botões */
+.btn {
+  text-decoration: none !important;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  margin: 0.15rem;
+}
+
+.btn-secondary {
+  margin: 0.15rem;
 }
 
 .text-white {
-  text-decoration: none;
+  text-decoration: none !important;
 }
-
-.mb-0 a{
-  text-decoration: none;
-}
-
-.mb-1 a{
-  text-decoration: none;
-}
-
 
 .album-card {
   height: 350px; 
@@ -135,7 +149,6 @@
   line-clamp: auto;
   -webkit-box-orient: vertical;
 }
-
 
 .album-img.d-flex {
     height: 250px; 
